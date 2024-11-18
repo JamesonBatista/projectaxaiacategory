@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Giratório com Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-wrapper">
+      <div class="logo"><img src="logo.png" alt="Logo"></div>
+    </div>
+    <div class="card" id="card">
+      <div class="card-front">
+        <div class="buttons">
+          <button class="menu-btn" onclick="showChat('Test')">Test</button>
+          <button class="menu-btn" onclick="showChat('Cenários')">Cenários</button>
+          <button class="menu-btn" onclick="showChat('Opção 3')">Opção 3</button>
+          <button class="menu-btn" onclick="showChat('Opção 4')">Opção 4</button>
+          <button class="menu-btn" onclick="showChat('Opção 5')">Opção 5</button>
+          <button class="menu-btn" onclick="showChat('Opção 6')">Opção 6</button>
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="chat-header" id="chatHeader">Descrição da funcionalidade selecionada</div>
+        <div class="chat">
+          <div class="chat-output" id="chatOutput"></div>
+          <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button class="attach-btn">📎</button>
+            <button class="send-btn" onclick="sendMessage()">Enviar</button>
+          </div>
+        </div>
+        <button class="back-btn" onclick="showMenu()">Voltar</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
