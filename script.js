@@ -8,9 +8,8 @@ const chatHistory = {};
 
 // Mostra o chat ao selecionar uma funcionalidade
 function showChat(feature) {
-  // Atualiza o cabeçalho do chat
   chatHeader.textContent = `Você selecionou: ${feature}`;
-  
+
   // Verifica se há histórico para a funcionalidade selecionada
   if (chatHistory[feature]) {
     chatOutput.innerHTML = chatHistory[feature];
@@ -19,6 +18,9 @@ function showChat(feature) {
   }
 
   card.style.transform = 'rotateY(180deg)';
+
+  // Atualiza o card de explicação com base na funcionalidade
+  updateExplanationCard(feature);
 }
 
 // Retorna ao menu principal
@@ -46,15 +48,59 @@ function sendMessage() {
 
   // Adiciona resposta da IA
   const botBubble = document.createElement('div');
-  botBubble.textContent = `IA: ${userMessage}`;
+  botBubble.textContent = `IA: Resposta para "${userMessage}"`;
   botBubble.classList.add('bot-message');
   chatOutput.appendChild(botBubble);
 
-  // Rolagem automática para a última mensagem
+  // Rolagem automática para última mensagem
   chatOutput.scrollTop = chatOutput.scrollHeight;
 
   // Limpa o input
   userInput.value = '';
+
+  // Salva o histórico da funcionalidade atual
+  const currentFeature = chatHeader.textContent.replace('Você selecionou: ', '').trim();
+  if (currentFeature) {
+    chatHistory[currentFeature] = chatOutput.innerHTML;
+  }
+}
+
+// Atualiza o card de explicação com base na funcionalidade
+function updateExplanationCard(feature) {
+  const explanations = {
+    Test: {
+      title: 'Teste',
+      text: 'Aqui você pode realizar testes e verificar funcionalidades.',
+    },
+    'Cenários': {
+      title: 'Cenários',
+      text: 'Nesta seção, você pode gerenciar cenários de teste.',
+    },
+    'Opção 3': {
+      title: 'Opção 3',
+      text: 'Detalhes sobre a funcionalidade da opção 3.',
+    },
+    'Opção 4': {
+      title: 'Opção 4',
+      text: 'Detalhes sobre a funcionalidade da opção 4.',
+    },
+    'Opção 5': {
+      title: 'Opção 5',
+      text: 'Detalhes sobre a funcionalidade da opção 5.',
+    },
+    'Opção 6': {
+      title: 'Opção 6',
+      text: 'Detalhes sobre a funcionalidade da opção 6.',
+    },
+  };
+
+  if (explanations[feature]) {
+    explanationTitle.textContent = explanations[feature].title;
+    explanationText.textContent = explanations[feature].text;
+  } else {
+    explanationTitle.textContent = 'Título Desconhecido';
+    explanationText.textContent = 'Nenhuma informação disponível.';
+  }
 }
 
 // Adiciona evento para enviar mensagem ao pressionar Enter
