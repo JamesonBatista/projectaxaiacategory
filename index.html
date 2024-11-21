@@ -31,10 +31,12 @@
           <div class="chat">
             <div class="chat-output" id="chatOutput"></div>
             <div class="chat-input">
+              <label for="fileInput" class="attach-btn">📎</label>
+              <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect(event)">
               <input type="text" id="userInput" placeholder="Digite sua mensagem...">
-              <button class="attach-btn">📎</button>
               <button class="send-btn" onclick="sendMessage()">Enviar</button>
             </div>
+            
           </div>
           <button class="back-btn" onclick="showMenu()">Voltar</button>
         </div>

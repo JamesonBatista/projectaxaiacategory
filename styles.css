@@ -7,39 +7,39 @@ body {
 	background-color: #333;
 	font-family: Arial, sans-serif;
 	color: #fff;
-  }
-  
-  .container {
+}
+
+.container {
 	perspective: 1200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-  }
-  
-  /* Mantém a logo estática */
-  .logo-wrapper {
+}
+
+/* Mantém a logo estática */
+.logo-wrapper {
 	position: relative;
 	z-index: 2;
 	margin-bottom: 20px;
-  }
-  
-  .logo img {
+}
+
+.logo img {
 	max-width: 120px;
 	height: auto;
-  }
-  
-  .card {
+}
+
+.card {
 	width: 500px;
 	height: 600px;
 	position: relative;
 	transform-style: preserve-3d;
 	transform: rotateY(0deg);
 	transition: transform 0.8s;
-  }
-  
-  .card-front,
-  .card-back {
+}
+
+.card-front,
+.card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -52,15 +52,15 @@ body {
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  .card-back {
+}
+
+.card-back {
 	transform: rotateY(180deg);
 	justify-content: flex-start;
-  }
-  
-  /* Botões */
-  .buttons {
+}
+
+/* Botões */
+.buttons {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
@@ -69,9 +69,9 @@ body {
 	align-items: center;
 	justify-items: center;
 	padding: 20px;
-  }
-  
-  .menu-btn {
+}
+
+.menu-btn {
 	width: 150px;
 	height: 50px;
 	padding: 10px;
@@ -85,15 +85,15 @@ body {
 	text-align: center;
 	transition: all 0.3s ease;
 	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .menu-btn:hover {
+}
+
+.menu-btn:hover {
 	background: linear-gradient(145deg, #888, #aaa);
 	transform: scale(1.1);
-  }
-  
-  /* Chat */
-  .chat-header {
+}
+
+/* Chat */
+.chat-header {
 	width: 100%;
 	text-align: center;
 	background: #555;
@@ -102,73 +102,82 @@ body {
 	margin-bottom: 10px;
 	font-size: 18px;
 	font-weight: bold;
-  }
-  
-  .chat {
+}
+
+.chat {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	overflow: hidden; /* Garante que nada extrapole o card */
-  }
-  
-  .chat-output {
+	overflow: hidden;
+	/* Garante que nada extrapole o card */
+}
+
+.chat-output {
 	flex: 1;
 	overflow-y: auto;
 	padding: 10px;
-  }
-  
-  .chat-output div {
-	margin: 10px 0; /* Espaçamento entre mensagens */
+}
+
+.chat-output div {
+	margin: 10px 0;
+	/* Espaçamento entre mensagens */
 	padding: 10px;
 	font-size: 14px;
-	max-width: 80%; /* Limita a largura das mensagens */
+	max-width: 80%;
+	/* Limita a largura das mensagens */
 	border-radius: 10px;
 	line-height: 1.5;
-  }
-  
-  .chat-output div.user-message {
+}
+
+.chat-output div.user-message {
 	align-self: flex-end;
 	background: #1da1f2;
 	color: white;
 	text-align: right;
 	border-top-right-radius: 0;
-  }
-  
-  .chat-output div.bot-message {
+}
+
+.chat-output div.bot-message {
 	align-self: flex-start;
 	background: #555;
 	color: white;
 	text-align: left;
 	border-top-left-radius: 0;
-  }
-  
-  .chat-input {
+}
+
+.chat-input {
 	display: flex;
 	gap: 10px;
 	margin-top: 10px;
 	padding: 10px;
-	background: #444; /* Mesma cor do card */
-	border-radius: 5px; /* Ajuste visual */
-	box-sizing: border-box; /* Garante que o padding seja incluído no tamanho */
+	background: #444;
+	/* Mesma cor do card */
+	border-radius: 5px;
+	/* Ajuste visual */
+	box-sizing: border-box;
+	/* Garante que o padding seja incluído no tamanho */
 	width: 100%;
-  }
-  
-  /* Estilo do input do chat */
-  .chat-input input {
+}
+
+/* Estilo do input do chat */
+.chat-input input {
 	flex: 1;
 	padding: 10px;
 	border-radius: 5px;
 	border: none;
-	overflow: hidden; /* Remove scroll horizontal */
+	overflow: hidden;
+	/* Remove scroll horizontal */
 	white-space: nowrap;
-	text-overflow: ellipsis; /* Adiciona "..." para texto muito longo */
-	box-sizing: border-box; /* Garante que o padding seja respeitado */
-  }
-  
-  /* Botões de input */
-  .attach-btn,
-  .send-btn {
+	text-overflow: ellipsis;
+	/* Adiciona "..." para texto muito longo */
+	box-sizing: border-box;
+	/* Garante que o padding seja respeitado */
+}
+
+/* Botões de input */
+
+.send-btn {
 	padding: 10px;
 	border: none;
 	border-radius: 5px;
@@ -179,18 +188,41 @@ body {
 	font-weight: bold;
 	transition: all 0.3s ease;
 	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-	flex-shrink: 0; /* Impede que os botões diminuam */
-  }
-  
-  .attach-btn:hover,
-  .send-btn:hover {
+	flex-shrink: 0;
+	/* Impede que os botões diminuam */
+}
+
+.attach-btn {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: linear-gradient(145deg, #555, #777);
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	/* Largura do botão */
+	height: 50px;
+	/* Altura do botão */
+	text-align: center;
+}
+
+
+.attach-btn:hover,
+.send-btn:hover {
 	background: linear-gradient(145deg, #888, #aaa);
 	transform: scale(1.1);
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Estilo do botão de voltar */
-  .back-btn {
+}
+
+/* Estilo do botão de voltar */
+.back-btn {
 	margin-top: 10px;
 	padding: 10px;
 	border: none;
@@ -202,22 +234,22 @@ body {
 	font-weight: bold;
 	transition: all 0.3s ease;
 	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .back-btn:hover {
+}
+
+.back-btn:hover {
 	background: linear-gradient(145deg, #888, #aaa);
 	transform: scale(1.1);
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Conteúdo principal */
-  .main-content {
+}
+
+/* Conteúdo principal */
+.main-content {
 	display: flex;
 	gap: 20px;
-  }
-  
-  /* Card de explicação */
-  .explanation-card {
+}
+
+/* Card de explicação */
+.explanation-card {
 	width: 300px;
 	height: 600px;
 	background: #444;
@@ -230,35 +262,183 @@ body {
 	align-items: center;
 	color: #fff;
 	margin-left: 30px;
-  }
-  
-  .explanation-card h2 {
+}
+
+.explanation-card h2 {
 	font-size: 24px;
 	margin-bottom: 15px;
-  }
-  
-  .explanation-card p {
+}
+
+.explanation-card p {
 	font-size: 16px;
 	line-height: 1.5;
 	text-align: center;
-  }
-  /* Personalizando o scroll do chat */
+}
+
+/* Personalizando o scroll do chat */
 .chat-output::-webkit-scrollbar {
-	width: 8px; /* Largura da barra de rolagem */
-  }
-  
-  .chat-output::-webkit-scrollbar-track {
-	background: #5555559c; /* Cor do fundo da barra */
-	border-radius: 10px; /* Bordas arredondadas */
-  }
-  
-  .chat-output::-webkit-scrollbar-thumb {
-	background: #1da0f271; /* Cor da barra de rolagem */
-	border-radius: 10px; /* Bordas arredondadas */
-  }
-  
-  .chat-output::-webkit-scrollbar-thumb:hover {
-	background: #1a8cd86f; /* Cor da barra quando está em hover */
-  }
-  
-  
+	width: 8px;
+	/* Largura da barra de rolagem */
+}
+
+.chat-output::-webkit-scrollbar-track {
+	background: #5555559c;
+	/* Cor do fundo da barra */
+	border-radius: 10px;
+	/* Bordas arredondadas */
+}
+
+.chat-output::-webkit-scrollbar-thumb {
+	background: #1da0f271;
+	/* Cor da barra de rolagem */
+	border-radius: 10px;
+	/* Bordas arredondadas */
+}
+
+.chat-output::-webkit-scrollbar-thumb:hover {
+	background: #1a8cd86f;
+	/* Cor da barra quando está em hover */
+}
+
+/* Responsividade para dispositivos menores */
+@media screen and (max-width: 768px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	.container {
+		perspective: 1000px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	.card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height:400px;
+		transform-style: preserve-3d;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.card-front,
+	.card-back {
+		width: 90%;
+		padding: 15px;
+		height: auto;
+		/* Reduz o padding em dispositivos menores */
+	}
+
+	/* Ajuste do card de explicação */
+	.explanation-card {
+		width: 90%;
+		/* Ajusta a largura para dispositivos menores */
+		height: auto;
+		/* Permite altura dinâmica */
+		margin: 0 auto;
+		/* Centraliza o card */
+	}
+
+	/* Botões no card principal */
+	.buttons {
+		grid-template-columns: 0.6fr;
+		/* Cada botão ocupa a linha inteira */
+		gap: 10px;
+		/* Espaçamento maior entre os botões */
+	}
+
+	.menu-btn {
+		width: 100%;
+		/* Botões ocupam toda a largura disponível */
+		height: auto;
+		/* Altura ajustada ao texto */
+		padding: 15px;
+		/* Maior espaçamento interno */
+		font-size: 18px;
+		/* Aumenta o tamanho do texto */
+	}
+
+	/* Chat no celular */
+	.chat {
+		flex-direction: column;
+		height: auto;
+		/* Ajusta a altura */
+	}
+
+	.chat-header {
+		font-size: 16px;
+		/* Reduz o tamanho da fonte */
+		padding: 8px;
+	}
+
+	.chat-output {
+		padding: 5px;
+		/* Reduz o espaçamento interno */
+		height: 300px;
+		/* Define uma altura fixa para a área do chat */
+		overflow-y: auto;
+		/* Garante a rolagem para chats longos */
+	}
+
+	.chat-input {
+		flex-direction: column;
+		/* Input e botões em linha no celular */
+		gap: 10px;
+		padding: 10px;
+		width: 100%;
+	}
+
+	.chat-input input {
+		font-size: 14px;
+		padding: 8px;
+		width: 100%;
+		/* Garante que ocupe toda a largura */
+	}
+
+	.attach-btn,
+	.send-btn {
+		width: 100%;
+		/* Botões ocupam toda a largura */
+		height: auto;
+		padding: 10px;
+		font-size: 16px;
+	}
+
+	.back-btn {
+		width: 100%;
+		/* Botão "voltar" ocupa a largura no celular */
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	/* Ajuste da logo */
+	.logo-wrapper {
+		margin-bottom: 20px;
+		text-align: center;
+		/* Centraliza a logo */
+	}
+
+	.logo img {
+		max-width: 80px;
+		/* Reduz o tamanho da logo */
+		height: auto;
+	}
+}

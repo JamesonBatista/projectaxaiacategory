@@ -109,3 +109,17 @@ userInput.addEventListener('keydown', (event) => {
     sendMessage();
   }
 });
+function handleFileSelect(event) {
+  const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
+
+  if (file) {
+    // Adiciona a mensagem ao chat
+    const fileBubble = document.createElement('div');
+    fileBubble.textContent = `Arquivo selecionado: ${file.name}`;
+    fileBubble.classList.add('user-message');
+    chatOutput.appendChild(fileBubble);
+
+    // Rolagem automática para a última mensagem
+    chatOutput.scrollTop = chatOutput.scrollHeight;
+  }
+}
