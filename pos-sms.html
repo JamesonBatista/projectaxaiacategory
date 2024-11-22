@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pré-refinamento - POs e SMs</title>
+	<link rel="stylesheet" href="pm.css">
+</head>
+
+<body>
+	<div class="back-button">
+		<button onclick="goBack()">Voltar</button>
+	  </div>
+	<div class="container">
+		<div class="top-section">
+			<h1>Pré-refinamento - POs e SMs</h1>
+			<textarea id="defaultText" rows="6">
+1. Leia todo o texto e, baseado nas regras de negócio,
+construa cenários de testes usando "Dado, Quando, Então".
+2. Identifique os critérios de aceitação.
+
+      </textarea>
+			<label>
+				<input type="checkbox" checked id="includeDefaultText"> Incluir este texto no envio
+			</label>
+		</div>
+		<div class="bottom-section">
+			<div class="chat-box" id="chatBox">
+				<!-- Mensagens aparecerão aqui -->
+			</div>
+			<div class="chat-input">
+				<textarea id="messageInput" placeholder="Digite sua mensagem..."></textarea>
+				<input type="file" id="fileInput">
+				<button id="sendButton">Enviar</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="pm.js"></script>
+</body>
+
+</html>

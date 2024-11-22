@@ -4,53 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card com Explicação</title>
+  <title>Interactive Cards</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="logo-wrapper">
-      <div class="logo"><img src="logo.png" alt="Logo"></div>
+      <!-- posm -->
+    <div class="card" onclick="navigateTo('pos-sms.html')">
+      <img src="posm.webp" alt="POs and SMs">
+      <p>
+      <h3>POs e SMs:</h3> Refinamento de histórias e construção de cenários de testes.</p>
     </div>
-    <div class="main-content">
-      <!-- Card Principal -->
-      <div class="card" id="card">
-        <div class="card-front">
-          <div class="buttons">
-            <button class="menu-btn" onclick="showChat('Test')">Test</button>
-            <button class="menu-btn" onclick="showChat('Cenários')">Cenários</button>
-            <button class="menu-btn" onclick="showChat('Opção 3')">Opção 3</button>
-            <button class="menu-btn" onclick="showChat('Opção 4')">Opção 4</button>
-            <button class="menu-btn" onclick="showChat('Opção 5')">Opção 5</button>
-            <button class="menu-btn" onclick="showChat('Opção 6')">Opção 6</button>
-          </div>
-        </div>
-        <div class="card-back">
-          <div class="chat-header" id="chatHeader">Descrição da funcionalidade selecionada</div>
-          <div class="chat">
-            <div class="chat-output" id="chatOutput"></div>
-            <div class="chat-input">
-              <label for="fileInput" class="attach-btn">📎</label>
-              <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect(event)">
-              <input type="text" id="userInput" placeholder="Digite sua mensagem...">
-              <button class="send-btn" onclick="sendMessage()">Enviar</button>
-            </div>
-            
-          </div>
-          <button class="back-btn" onclick="showMenu()">Voltar</button>
-        </div>
-      </div>
-  
-      <!-- Card de Explicação -->
-      <div class="explanation-card" id="explanationCard">
-        <h2 id="explanationTitle">Título</h2>
-        <p id="explanationText">Selecione uma funcionalidade para mais informações.</p>
-      </div>
+      <!-- tester -->
+    <div class="card" onclick="navigateTo('test.html')">
+      <img src="tester.webp" alt="Testers">
+      <p><h3>Testers:</h3> Construção de testes automatizados.</p>
     </div>
+    <!-- metricas -->
+    <div class="card" onclick="navigateTo('metricas.html')">
+      <img src="metricas.webp" alt="Testers">
+      <p><h3>Metricas:</h3> Metricas de qualidade.</p>
+    </div>
+    <!--  -->
+    
   </div>
-  
-
   <script src="script.js"></script>
 </body>
 

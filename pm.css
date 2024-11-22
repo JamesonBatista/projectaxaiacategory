@@ -1,0 +1,140 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url('bg-login.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* Garante que ocupe toda a altura da tela */
+	overflow: hidden; /* Remove qualquer scroll extra */
+  }
+  
+  .back-button {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 10; /* Garante que o botão esteja acima de outros elementos */
+  }
+  
+  .back-button button {
+	padding: 8px 15px;
+	background-color: #0078D7;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-button button:hover {
+	background-color: #005BB5;
+	transform: scale(1.05);
+  }
+  
+  .top-section {
+	padding: 50px 20px 10px; /* Espaço no topo para o botão "Voltar" */
+	box-sizing: border-box;
+	height: 30%;
+	overflow: hidden; /* Remove qualquer scroll na parte superior */
+	position: relative;
+  }
+  
+  .top-section h1 {
+	margin: 0;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+  }
+  
+  .top-section textarea {
+	width: 100%;
+	height: calc(100% - 80px); /* Ajusta a altura com base no restante da seção */
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: none; /* Remove a opção de redimensionamento */
+	color: #000;
+	box-sizing: border-box; /* Inclui padding e bordas na altura */
+	overflow: hidden; /* Remove scroll do textarea */
+  }
+  
+  .top-section label {
+	display: block;
+	margin-top: 10px;
+  }
+  
+  .bottom-section {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	color: #000;
+	overflow: hidden; /* Impede scroll na parte inferior */
+	box-sizing: border-box;
+  }
+  
+  .chat-box {
+	flex: 1;
+	padding: 20px;
+	overflow-y: auto; /* Apenas rolagem vertical no chat */
+	background: #fff;
+	border-top: 1px solid #ddd;
+  }
+  
+  .chat-input {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-top: 1px solid #ddd;
+  }
+  
+  .chat-input textarea {
+	flex: 1;
+	resize: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin-right: 10px;
+	height: 50px;
+  }
+  
+  .chat-input input[type="file"] {
+	margin-right: 10px;
+	cursor: pointer;
+	padding: 5px 10px;
+	background-color: #e0e0e0;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .chat-input input[type="file"]:hover {
+	background-color: #d4d4d4;
+	border-color: #0078D7;
+  }
+  
+  .chat-input button {
+	padding: 10px 15px;
+	background-color: #0078D7;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .chat-input button:hover {
+	background-color: #005BB5;
+	transform: scale(1.05);
+  }
+  
