@@ -1,54 +1,154 @@
 body {
 	font-family: Arial, sans-serif;
-	background-image: url('bg-login.webp'); /* Caminho da imagem de fundo */
-	background-size: cover; /* Faz a imagem cobrir todo o fundo */
-	background-position: center; /* Centraliza a imagem no fundo */
-	background-repeat: no-repeat; /* Evita repetição da imagem */
+	background-image: url('bg-login.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+}
+
+/* Estilo do contêiner */
+.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff; /* Ajusta a cor do texto para contraste com o fundo */
-  }
-  
-  .container {
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	flex-wrap: wrap;
 	gap: 20px;
-	width: 90%;
-	max-width: 1200px;
-  }
-  
-  .card {
-	background: #fff;
-	color: #333;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	cursor: pointer;
+	margin-top: 50px;
+	perspective: 1200px; /* Cria a ilusão de profundidade */
+}
+
+/* Estilo dos cards */
+.card {
+	width: 300px;
+	height: 400px;
+	background: linear-gradient(145deg, #ffffff1a, #ffffff);
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .card img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-  }
-  
-  .card p {
-	padding: 15px;
-	margin: 0;
-	font-size: 14px;
-  }
-  
-  .card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
+	transform-origin: center center;
+	opacity: 0;
+	transform: scale(0.5) translateY(50px) rotateY(90deg); /* Começa pequeno e inclinado */
+	animation: cardEntry 1.5s ease-out forwards;
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o hover */
+	color: #333;
+	padding: 20px; /* Adiciona espaço interno */
+}
+
+/* Estilo para a imagem */
+.card img {
+	width: 80%;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 10px; /* Reduzido para aproximar do h3 */
+	transition: transform 0.3s ease-in-out; /* Suaviza o efeito no hover */
+}
+
+/* Estilo para o texto */
+
+.card h3 {
+	font-size: 1.5rem;
+	color: #0007d7; /* Destaque para o título */
+	margin-top: 0; /* Remove espaço extra acima */
+}
+
+/* Hover impressionante */
+.card:hover {
+	transform: scale(1.05) rotateY(0deg); /* Cresce ligeiramente */
+	box-shadow: 0 30px 45px rgba(0, 0, 0, 0.3), 0 0 20px cyan;
+	background: linear-gradient(145deg, #ffffffd6,  #ffffff1a);
+
+	& h3 {
+		font-size: 1.6rem;
+	}
+	&.card{
+		color: black;
+	}
+}
+
+.card:hover img {
+	transform: scale(1.2); /* Zoom na imagem */
+}
+
+.card:hover p {
+	transform: scale(1.02); /* Zoom leve no texto */
+	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes cardEntry {
+	0% {
+		opacity: 0;
+		transform: scale(0.5) translateY(50px) rotateY(90deg);
+	}
+	50% {
+		opacity: 0.7;
+		transform: scale(0.7) translateY(-10px) rotateY(45deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0) rotateY(0deg);
+	}
+}
+
+/* Estilizando os delays */
+.card:nth-child(1) {
+	animation-delay: 0.3s;
+}
+.card:nth-child(2) {
+	animation-delay: 0.6s;
+}
+.card:nth-child(3) {
+	animation-delay: 0.9s;
+}
+
+/* Título animado */
+.titulo-animado {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	color: transparent;
+}
+
+.titulo-animado div {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.titulo-animado span {
+	display: inline-block;
+	animation: colorWave 3s infinite ease-in-out;
+	background: linear-gradient(90deg, blue, red, white);
+	background-size: 300%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+@keyframes colorWave {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
