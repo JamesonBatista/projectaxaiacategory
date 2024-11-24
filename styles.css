@@ -50,6 +50,7 @@ body {
 	/* Suaviza o hover */
 	color: #333;
 	padding: 20px;
+	cursor: pointer;
 	/* Adiciona espaço interno */
 }
 
