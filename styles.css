@@ -16,6 +16,67 @@ body {
 	align-items: center;
 	color: #fff;
 }
+.logo-container{
+	display: flex;
+
+	.logo{
+		width: 50px;
+		position: fixed;
+		margin: 0;
+		padding: 10px;
+		left: 0;
+		border-radius: 5px;
+	}
+	.top .p{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+
+.darwin img {
+	width: 150px;
+	background-color: transparent;
+}
+
+.darwin-text {
+	font-weight: bold;
+	font-size: 3rem;
+	letter-spacing: 2px;
+	margin-top: -36px;
+}
+
+.quali {
+	font-size: 1rem;
+	letter-spacing: 3px;
+}
+.darwin-text, .quali {
+	font-weight: bold;
+	display: inline-block;
+	background: linear-gradient(90deg, 
+		blue, 
+		white, 
+		red, 
+		white, 
+		blue);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: wave 6s infinite ease-in-out;
+}
+
+@keyframes wave {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 /* Estilo do contêiner */
 .container {
@@ -29,11 +90,20 @@ body {
 	/* Cria a ilusão de profundidade */
 }
 
+.portal {
+	letter-spacing: 2px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
 /* Estilo dos cards */
 .card {
 	width: 300px;
 	height: 400px;
-	background: linear-gradient(145deg, #ffffff1a, #ffffff);
+	/* background: linear-gradient(145deg, #ffffff1a, #ffffff); */
+	background: white;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	display: flex;
@@ -72,15 +142,10 @@ body {
 /* Estilo para o texto */
 
 .card h3 {
-	font-size: 1.5rem;
-	color: #0007d7;
-	font-family: "Bungee Spice", sans-serif;
-	font-weight: 200;
-	font-style: normal;
-	/* Destaque para o título */
-	margin-top: 0;
-	/* Remove espaço extra acima */
-	transition: transform 0.3s ease-in-out;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
 }
 
 /* Hover impressionante */
@@ -98,7 +163,7 @@ body {
 	}
 
 	&.card {
-		color: black;
+		color: rgb(0, 0, 0);
 	}
 }
 
@@ -142,35 +207,6 @@ body {
 
 .card:nth-child(3) {
 	animation-delay: 0.9s;
-}
-
-/* Título animado */
-.titulo-animado {
-	font-size: 3rem;
-	font-weight: bold;
-	text-align: center;
-	margin: 20px 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 10px;
-	color: transparent;
-}
-
-.titulo-animado div {
-	display: flex;
-	justify-content: center;
-	gap: 5px;
-}
-
-.titulo-animado span {
-	display: inline-block;
-	animation: colorWave 3s infinite ease-in-out;
-	background: linear-gradient(90deg, blue, red, white);
-	background-size: 300%;
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
 }
 
 @keyframes colorWave {
