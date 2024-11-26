@@ -38,18 +38,19 @@ body {
 .darwin img {
 	width: 150px;
 	background-color: transparent;
+	margin-left: 20px;
 }
 
 .darwin-text {
 	font-weight: bold;
 	font-size: 3rem;
-	letter-spacing: 2px;
+	letter-spacing: 6px;
 	margin-top: -36px;
 }
 
 .quali {
 	font-size: 1rem;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 }
 .darwin-text, .quali {
 	font-weight: bold;
@@ -78,7 +79,7 @@ body {
 	}
 }
 
-/* Estilo do contêiner */
+
 .container {
 	display: flex;
 	justify-content: center;
@@ -89,7 +90,7 @@ body {
 	perspective: 1200px;
 	width: 100%;
 	justify-content: space-around;
-	/* Cria a ilusão de profundidade */
+	
 }
 
 .portal {
@@ -97,17 +98,12 @@ body {
 	font-family: 'Times New Roman', Times, serif;
 }
 
-
-
-
-/* Estilo dos cards */
 .card {
 	width: 225px;
-	height: 360px;
-	/* background: linear-gradient(145deg, #ffffff1a, #ffffff); */
+	height: 310px;
 	background: white;
 	border-radius: 20px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -116,52 +112,44 @@ body {
 	transform-origin: center center;
 	opacity: 0;
 	transform: scale(0.5) translateY(50px) rotateY(90deg);
-	/* Começa pequeno e inclinado */
 	animation: cardEntry 1.5s ease-out forwards;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	/* Suaviza o hover */
 	color: #333;
 	padding: 20px;
+	font-size: 12px;
 	cursor: pointer;
-	/* Adiciona espaço interno */
+	
 }
 
-/* Estilo para a imagem */
+
 .card img {
-	width: 80%;
+	width: 90%;
 	height: auto;
 	border-radius: 10px;
 	margin-bottom: 10px;
-	/* Reduzido para aproximar do h3 */
 	transition: transform 0.3s ease-in-out;
-	/* Suaviza o efeito no hover */
 }
 
 .img1 {
 	margin-top: 20px;
 }
 
-/* Estilo para o texto */
-
 .card h3 {
 	font-size: 20px;
 	font-weight: bold;
 	color: #333;
 	text-align: center;
+	margin-bottom: 0px;;
 }
 
-/* Hover impressionante */
 .card:hover {
 	transform: scale(1.05) rotateY(0deg);
-	/* Cresce ligeiramente */
 	box-shadow: 0 30px 45px rgba(0, 0, 0, 0.3), 0 0 30px cyan;
-	/* background: linear-gradient(145deg, #ffffffd6, #ffffff1a); */
 
 	& h3 {
 		font-size: 1.6rem;
 		letter-spacing: 2px;
 		transition: transform 0.3s ease-in-out;
-
 	}
 
 	&.card {
@@ -171,16 +159,13 @@ body {
 
 .card:hover img {
 	transform: scale(1.2);
-	/* Zoom na imagem */
 }
 
 .card:hover p {
-	transform: scale(1.02);
-	/* Zoom leve no texto */
 	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Animação de entrada */
+
 @keyframes cardEntry {
 	0% {
 		opacity: 0;
@@ -198,7 +183,7 @@ body {
 	}
 }
 
-/* Estilizando os delays */
+
 .card:nth-child(1) {
 	animation-delay: 0.3s;
 }
