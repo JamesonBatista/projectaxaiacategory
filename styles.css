@@ -50,6 +50,7 @@ body {
 
 	.top .p {
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 	}
 }
@@ -64,12 +65,28 @@ body {
 	font-weight: bold;
 	font-size: 3rem;
 	letter-spacing: 6px;
-	margin-top: -36px;
+	margin-top: -30px;
 }
 
 .quali {
 	font-size: 1rem;
 	letter-spacing: 5px;
+}
+
+.darwin-text,
+.quali {
+	font-weight: bold;
+	display: inline-block;
+	background: linear-gradient(90deg,
+			blue,
+			white,
+			red,
+			white,
+			blue);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: wave 6s infinite ease-in-out;
 }
 
 @keyframes wave {
@@ -124,7 +141,6 @@ body {
 	padding: 20px;
 	font-size: 12px;
 	cursor: pointer;
-	border: 1px solid #333;
 
 }
 
@@ -156,8 +172,6 @@ body {
 
 .card:hover img {
 	transform: scale(1.2);
-	border-left: 2px solid #33333389;
-	border-bottom: 2px solid #33333389;
 }
 
 .card:hover p {
