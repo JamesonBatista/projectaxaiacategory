@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Syriac+Eastern:wght@100..900&display=swap');
 
 @font-face {
 	font-family: 'darwin1';
@@ -33,13 +34,7 @@ body {
 }
 
 .logo-container {
-	background-image: url("./darwinai.webp");
-	background-color: #000000;
-	background-size: cover;
-	/* Garante que a imagem cubra todo o espaço */
-	background-position: center;
-	/* Centraliza a imagem no container */
-	background-repeat: no-repeat;
+
 	/* Evita que a imagem se repita */
 	display: flex;
 	padding-left: 10px;
@@ -87,14 +82,35 @@ body {
 		justify-content: center;
 		align-items: center;
 	}
+
+	.backlogo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		filter: blur(2px);
+		width: 100%;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: url("./darwinai.webp");
+		background-color: #000000;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}
 }
 
 .darwin img {
 	width: 100px;
+	padding: 10px;
 	background-color: transparent;
 	margin-left: 20px;
 	border-radius: 15px;
 	margin-top: 10px;
+	filter: none
 }
 
 .darwin-text {
@@ -113,25 +129,27 @@ body {
 
 .darwin-text,
 .quali-text {
-	font-weight: bold;
-	color: #fff;
-	background-color: rgba(93, 92, 92, 0.345);
-	border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  background: linear-gradient(50deg, transparent, #ffffff5a, transparent);
+  background-size: 200%; /* Permite o movimento do gradiente */
+  animation: backgroundMove 5s infinite ease-in-out; /* Animação suave */
+  font-family: "Noto Sans Syriac Eastern", sans-serif;
 }
 
-@keyframes wave {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%; /* Começa do início */
+  }
+  50% {
+    background-position: 100% 50%; /* Move para o final */
+  }
+  100% {
+    background-position: 0% 50%; /* Volta ao início */
+  }
 }
+
 
 .container {
 	display: flex;
@@ -178,7 +196,7 @@ body {
 
 .card:hover {
 	transform: scale(1.05) rotateY(0deg);
-	box-shadow: rgba(0, 0, 255, 0.6) 0px 2px 4px, rgba(0, 0, 255, 0.5) 0px 7px 13px -3px, rgba(0, 0, 255, 0.4) 0px -3px 0px inset;
+	box-shadow: rgba(18, 18, 1, 1.5) 0px 2px 4px, rgba(18, 18, 1, 1.4) 0px 7px 13px -3px, rgba(18, 18, 1, 0.6)0px -3px 0px inset;
 }
 
 .card::before,
@@ -190,7 +208,9 @@ body {
 	height: 20px;
 	/* Altura da faixa */
 	z-index: 1;
+
 }
+
 
 /* .card::before {
 	background: blue;
@@ -202,8 +222,11 @@ body {
 .card::after {
 	background: red;
 	top: 20%;
-    left: 7%;
+	left: 7%;
 	transform: rotate(-47deg) translateY(50%);
+}
+.card:hover::after {
+	background: rgba(255, 0, 0, 0.491);
 }
 
 .card img,
@@ -238,6 +261,7 @@ body {
 
 .card:hover img {
 	transform: scale(1.2);
+	
 }
 
 .card:hover p {
