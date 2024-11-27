@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
 
+@font-face {
+	font-family: 'darwin1';
+	src: url('./hardenburg-demo.regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'darwin2';
+	src: url('./beauty-glitch-demo/Beauty\ Glitch\ Demo.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'darwin3';
+	src: url('./gladden-demo/GladdenDemoRegular.ttf') format('truetype');
+}
 
 body {
 	font-family: Arial, sans-serif;
@@ -20,7 +32,8 @@ body {
 }
 
 .logo-container {
-	background-image: url("./bg-login.webp");
+	/* background-image: url("./bg-login.webp"); */
+	background-color: #000000;
 	background-size: cover;
 	/* Garante que a imagem cubra todo o espaço */
 	background-position: center;
@@ -51,7 +64,6 @@ body {
 			border-bottom: 3px solid #fff;
 			border-right: 1px solid #ffffff66;
 			cursor: pointer;
-			background-color: blue;
 		}
 
 		img:hover {
@@ -68,6 +80,11 @@ body {
 		align-items: center;
 		flex-direction: column;
 	}
+	.darwin{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .darwin img {
@@ -82,10 +99,12 @@ body {
 	font-weight: bold;
 	font-size: 3rem;
 	letter-spacing: 6px;
-	margin-top: -10px;
+	padding: 10px;
+	/* font-family: 'darwin3', Arial, Helvetica, sans-serif; */
 }
 
-.quali {
+.quali-text {
+	padding: 10px;
 	font-size: 1rem;
 	letter-spacing: 5px;
 }
@@ -163,35 +182,34 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+.card:hover {
+	transform: scale(1.05) rotateY(0deg);
+	box-shadow: rgba(0, 0, 255, 0.6) 0px 2px 4px, rgba(0, 0, 255, 0.5) 0px 7px 13px -3px, rgba(0, 0, 255, 0.4) 0px -3px 0px inset;
+}
+
 .card::before,
 .card::after {
 	content: '';
 	position: absolute;
-	width: 225%;
+	width: 220%;
 	/* Largura maior que o card para cobrir na diagonal */
-	height: 30px;
+	height: 26px;
 	/* Altura da faixa */
 	z-index: 1;
 }
 
-.card::before {
+/* .card::before {
 	background: blue;
-	/* Cor da faixa azul */
-	top: 14%;
-	/* Centraliza verticalmente */
-	left: -50%;
-	/* Posiciona para começar na diagonal */
-	transform: rotate(40deg) translateY(-50%);
-}
+    top: -22%;
+    left: -50%;
+    transform: rotate(-40deg) translateY(50%);
+} */
 
 .card::after {
 	background: red;
-	/* Cor da faixa vermelha */
-	top: 2%;
-	/* Centraliza verticalmente */
-	left: -50%;
-	/* Posiciona para começar na diagonal */
-	transform: rotate(40deg) translateY(-50%);
+	top: 25%;
+    left: -50%;
+    transform: rotate(-48deg) translateY(50%);
 }
 
 .card img,
@@ -222,10 +240,7 @@ body {
 	;
 }
 
-.card:hover {
-	transform: scale(1.05) rotateY(0deg);
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+
 
 .card:hover img {
 	transform: scale(1.2);
