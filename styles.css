@@ -46,7 +46,6 @@ body {
 			border-bottom: 4px solid #fff;
 			border-right: 2px solid #ffffff66;
 		}
-
 	}
 
 	.top .p {
@@ -54,8 +53,6 @@ body {
 		flex-direction: column;
 	}
 }
-
-
 
 .darwin img {
 	width: 150px;
@@ -75,22 +72,6 @@ body {
 	letter-spacing: 5px;
 }
 
-.darwin-text,
-.quali {
-	font-weight: bold;
-	display: inline-block;
-	background: linear-gradient(90deg,
-			blue,
-			white,
-			red,
-			white,
-			blue);
-	background-size: 200%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: wave 6s infinite ease-in-out;
-}
-
 @keyframes wave {
 	0% {
 		background-position: 0% 50%;
@@ -104,7 +85,6 @@ body {
 		background-position: 0% 50%;
 	}
 }
-
 
 .container {
 	display: flex;
@@ -144,9 +124,9 @@ body {
 	padding: 20px;
 	font-size: 12px;
 	cursor: pointer;
+	border: 1px solid #333;
 
 }
-
 
 .card img {
 	width: 90%;
@@ -171,21 +151,13 @@ body {
 
 .card:hover {
 	transform: scale(1.05) rotateY(0deg);
-	box-shadow: 0 40px 55px rgba(0, 0, 0, 0.3), 0 0 50px #fff;
-
-	& h3 {
-		font-size: 1.6rem;
-		letter-spacing: 2px;
-		transition: transform 0.3s ease-in-out;
-	}
-
-	&.card {
-		color: rgb(0, 0, 0);
-	}
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3), 0 0 30px #fff;
 }
 
 .card:hover img {
 	transform: scale(1.2);
+	border-left: 2px solid #33333389;
+	border-bottom: 2px solid #33333389;
 }
 
 .card:hover p {
