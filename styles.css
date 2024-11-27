@@ -4,7 +4,8 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background-image: url('bg-login.webp');
+	/* background-image: url('bg-login.webp'); */
+	background-color: #fff;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -15,11 +16,22 @@ body {
 	flex-direction: column;
 	align-items: center;
 	color: #fff;
+	overflow-x: hidden;
 }
 
 .logo-container {
+	background-image: url("./bg-login.webp");
+	background-size: cover;
+	/* Garante que a imagem cubra todo o espaço */
+	background-position: center;
+	/* Centraliza a imagem no container */
+	background-repeat: no-repeat;
+	/* Evita que a imagem se repita */
 	display: flex;
 	padding-left: 10px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 
 
 	.logo-img {
@@ -27,6 +39,7 @@ body {
 		margin: 0;
 		padding: 10px;
 		left: 0;
+		top: 0;
 		border-radius: 5px;
 
 		img {
@@ -38,8 +51,10 @@ body {
 			border-bottom: 3px solid #fff;
 			border-right: 1px solid #ffffff66;
 			cursor: pointer;
+			background-color: blue;
 		}
-		img:hover{
+
+		img:hover {
 			width: 52px;
 			border-top: 2px solid #fff;
 			border-left: 4px solid #fff;
@@ -59,13 +74,15 @@ body {
 	width: 150px;
 	background-color: transparent;
 	margin-left: 20px;
+	border-radius: 15px;
+	margin-top: 10px;
 }
 
 .darwin-text {
 	font-weight: bold;
 	font-size: 3rem;
 	letter-spacing: 6px;
-	margin-top: -30px;
+	margin-top: -10px;
 }
 
 .quali {
@@ -128,6 +145,7 @@ body {
 	border-radius: 20px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -141,7 +159,47 @@ body {
 	padding: 20px;
 	font-size: 12px;
 	cursor: pointer;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 
+.card::before,
+.card::after {
+	content: '';
+	position: absolute;
+	width: 225%;
+	/* Largura maior que o card para cobrir na diagonal */
+	height: 30px;
+	/* Altura da faixa */
+	z-index: 1;
+}
+
+.card::before {
+	background: blue;
+	/* Cor da faixa azul */
+	top: 14%;
+	/* Centraliza verticalmente */
+	left: -50%;
+	/* Posiciona para começar na diagonal */
+	transform: rotate(40deg) translateY(-50%);
+}
+
+.card::after {
+	background: red;
+	/* Cor da faixa vermelha */
+	top: 2%;
+	/* Centraliza verticalmente */
+	left: -50%;
+	/* Posiciona para começar na diagonal */
+	transform: rotate(40deg) translateY(-50%);
+}
+
+.card img,
+.card h3,
+.card p {
+	position: relative;
+	z-index: 2;
+	/* Mantém o conteúdo acima das faixas */
 }
 
 .card img {
@@ -160,14 +218,13 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	color: #333;
-	text-align: center;
 	margin-bottom: 0px;
 	;
 }
 
 .card:hover {
 	transform: scale(1.05) rotateY(0deg);
-	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3), 0 0 30px #fff;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card:hover img {
