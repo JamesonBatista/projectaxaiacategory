@@ -5,10 +5,12 @@
 	font-family: 'darwin1';
 	src: url('./hardenburg-demo.regular.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'darwin2';
 	src: url('./beauty-glitch-demo/Beauty\ Glitch\ Demo.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'darwin3';
 	src: url('./gladden-demo/GladdenDemoRegular.ttf') format('truetype');
@@ -16,7 +18,6 @@
 
 body {
 	font-family: Arial, sans-serif;
-	/* background-image: url('bg-login.webp'); */
 	background-color: #fff;
 	background-size: cover;
 	background-position: center;
@@ -32,7 +33,7 @@ body {
 }
 
 .logo-container {
-	/* background-image: url("./bg-login.webp"); */
+	background-image: url("./darwinai.webp");
 	background-color: #000000;
 	background-size: cover;
 	/* Garante que a imagem cubra todo o espaço */
@@ -80,7 +81,8 @@ body {
 		align-items: center;
 		flex-direction: column;
 	}
-	.darwin{
+
+	.darwin {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -88,7 +90,7 @@ body {
 }
 
 .darwin img {
-	width: 150px;
+	width: 100px;
 	background-color: transparent;
 	margin-left: 20px;
 	border-radius: 15px;
@@ -105,24 +107,16 @@ body {
 
 .quali-text {
 	padding: 10px;
-	font-size: 1rem;
-	letter-spacing: 5px;
+	font-size: 1.1rem;
+	letter-spacing: 3px;
 }
 
 .darwin-text,
-.quali {
+.quali-text {
 	font-weight: bold;
-	display: inline-block;
-	background: linear-gradient(90deg,
-			blue,
-			white,
-			red,
-			white,
-			blue);
-	background-size: 200%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: wave 6s infinite ease-in-out;
+	color: #fff;
+	background-color: rgba(93, 92, 92, 0.345);
+	border-radius: 10px;
 }
 
 @keyframes wave {
@@ -191,9 +185,9 @@ body {
 .card::after {
 	content: '';
 	position: absolute;
-	width: 220%;
+	width: 322px;
 	/* Largura maior que o card para cobrir na diagonal */
-	height: 26px;
+	height: 20px;
 	/* Altura da faixa */
 	z-index: 1;
 }
@@ -207,9 +201,9 @@ body {
 
 .card::after {
 	background: red;
-	top: 25%;
-    left: -50%;
-    transform: rotate(-48deg) translateY(50%);
+	top: 20%;
+    left: 7%;
+	transform: rotate(-47deg) translateY(50%);
 }
 
 .card img,
