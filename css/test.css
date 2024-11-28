@@ -1,8 +1,9 @@
+/* Estilo geral */
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background-image: url('bg-login.webp');
+	background-image: url('/image/bg-login.webp');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -12,28 +13,22 @@ body {
 	flex-direction: column;
   }
   
-  .container {
-	display: flex;
-	flex-direction: column;
-	height: 100vh; /* Garante que ocupe toda a altura da tela */
-	overflow: hidden; /* Remove qualquer scroll extra */
-  }
-  
+  /* Botão de voltar */
   .back-button {
 	position: absolute;
-	top: 15px;
-	left: 15px;
-	z-index: 10; /* Garante que o botão esteja acima de outros elementos */
+	top: 10px;
+	left: 10px;
+	z-index: 10;
   }
   
   .back-button button {
-	padding: 8px 15px;
+	padding: 10px 20px;
 	background-color: #0078D7;
 	color: white;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	transition: background 0.3s ease, transform 0.2s ease;
+	transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .back-button button:hover {
@@ -41,60 +36,54 @@ body {
 	transform: scale(1.05);
   }
   
-  .top-section {
-	padding: 50px 20px 10px; /* Espaço no topo para o botão "Voltar" */
-	box-sizing: border-box;
-	height: 30%;
-	overflow: hidden; /* Remove qualquer scroll na parte superior */
+  /* Container do chat */
+  .chat-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%; /* Ocupa toda a largura */
+	height: 100%; /* Ocupa toda a altura */
+	overflow: hidden; /* Remove scroll horizontal */
+	padding-top: 50px; /* Dá espaço para o botão "Voltar" */
 	position: relative;
   }
   
-  .top-section h1 {
-	margin: 0;
-	color: #fff;
-	font-size: 20px;
-	text-align: center;
-  }
-  
-  .top-section textarea {
-	width: 100%;
-	height: calc(100% - 80px); /* Ajusta a altura com base no restante da seção */
-	margin-top: 10px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	resize: none; /* Remove a opção de redimensionamento */
-	color: #000;
-	box-sizing: border-box; /* Inclui padding e bordas na altura */
-	overflow: hidden; /* Remove scroll do textarea */
-  }
-  
-  .top-section label {
-	display: block;
-	margin-top: 10px;
-  }
-  
-  .bottom-section {
-	flex: 2;
-	display: flex;
-	flex-direction: column;
-	color: #000;
-	overflow: hidden; /* Impede scroll na parte inferior */
-	box-sizing: border-box;
-  }
-  
+  /* Caixa de mensagens */
   .chat-box {
 	flex: 1;
-	padding: 20px;
-	overflow-y: auto; /* Apenas rolagem vertical no chat */
+	padding: 15px;
+	overflow-y: auto; /* Scroll vertical apenas */
 	background: #fff;
 	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	color: #000; /* Texto preto */
   }
   
+  /* Estilo das mensagens no chat */
+  .chat-box div {
+	margin: 5px 0;
+	padding: 10px;
+	border-radius: 5px;
+	word-wrap: break-word;
+  }
+  
+  .chat-box .user-message {
+	background: #f1f1f1;
+	color: #000; /* Texto preto */
+	text-align: left;
+  }
+  
+  .chat-box .ai-response {
+	background: #e1f7d5;
+	color: #000; /* Texto preto */
+	text-align: left;
+  }
+  
+  /* Área de entrada */
   .chat-input {
 	display: flex;
 	align-items: center;
 	padding: 10px;
+	background: rgba(255, 255, 255, 0.9);
 	border-top: 1px solid #ddd;
   }
   
@@ -106,6 +95,7 @@ body {
 	padding: 10px;
 	margin-right: 10px;
 	height: 50px;
+	background: #f9f9f9;
   }
   
   .chat-input input[type="file"] {
