@@ -142,7 +142,6 @@ a{
 	padding: 10px;
 	font-size: 1.1rem;
 	/* letter-spacing: 3px; */
-	letter-spacing: 0.3px;
 
 }
 
@@ -177,7 +176,8 @@ a{
 
 .quali-text-source {
 	/* margin-left: 145px; */
-	margin-left: 35px;
+	margin-left: 31px;
+    width: 421px;
 
 }
 
