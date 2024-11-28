@@ -129,9 +129,11 @@ body {
 .darwin-text,
 .quali-text {
 	font-weight: bold;
-	color: blue;
+	color: gray;
 	border-radius: 10px;
-	background: linear-gradient(80deg, #33333371, #ffffff71, transparent);
+	background: linear-gradient(80deg, #ffffff8d, #ffffff, #ffffff8d);
+
+	/* background-color: #ffffffaa; */
 	background-size: 400%;
 	animation: luminousBackground 6s infinite ease-in-out;
 	font-family: "Noto Sans Syriac Eastern", sans-serif;
