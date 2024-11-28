@@ -129,7 +129,7 @@ body {
 .darwin-text,
 .quali-text {
 	font-weight: bold;
-	color: cyan;
+	color: blue;
 	border-radius: 10px;
 	background: linear-gradient(80deg, #33333371, #ffffff71, transparent);
 	background-size: 400%;
