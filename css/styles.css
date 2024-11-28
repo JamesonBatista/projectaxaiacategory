@@ -94,7 +94,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: url("image/darwinai.webp");
+		background-image: url("../image/darwinai.webp");
 		background-color: #000000;
 		background-size: cover;
 		background-position: center;
