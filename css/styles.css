@@ -110,7 +110,6 @@ body {
 	margin-left: 20px;
 	border-radius: 15px;
 	margin-top: 10px;
-	filter: none
 }
 
 .darwin-text {
@@ -129,26 +128,36 @@ body {
 
 .darwin-text,
 .quali-text {
-  font-weight: bold;
-  color: #fff;
-  border-radius: 10px;
-  background: linear-gradient(50deg, transparent, #ffffff5a, transparent);
-  background-size: 200%; /* Permite o movimento do gradiente */
-  animation: backgroundMove 5s infinite ease-in-out; /* Animação suave */
-  font-family: "Noto Sans Syriac Eastern", sans-serif;
+	font-weight: bold;
+	color: #000000;
+	border-radius: 10px;
+	background: linear-gradient(50deg, transparent, #ffffff5a, transparent);
+	background-size: 300%;
+	animation: luminousBackground 6s infinite ease-in-out;
+	font-family: "Noto Sans Syriac Eastern", sans-serif;
+	transition: all 0.3s ease;
 }
 
-@keyframes backgroundMove {
-  0% {
-    background-position: 0% 50%; /* Começa do início */
-  }
-  50% {
-    background-position: 100% 50%; /* Move para o final */
-  }
-  100% {
-    background-position: 0% 50%; /* Volta ao início */
-  }
+@keyframes luminousBackground {
+	0% {
+		background-position: 0% 50%;
+		filter: brightness(1);
+	}
+
+	50% {
+		background-position: 100% 50%;
+		filter: brightness(1.5);
+		text-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+	}
+
+	100% {
+		background-position: 0% 50%;
+		filter: brightness(1);
+	}
 }
+
+
 
 
 .container {
@@ -184,13 +193,13 @@ body {
 	opacity: 0;
 	transform: scale(0.5) translateY(50px) rotateY(90deg);
 	animation: cardEntry 1.5s ease-out forwards;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.4s ease, box-shadow 0.3s ease;
 	color: #333;
 	padding: 20px;
 	font-size: 12px;
 	cursor: pointer;
 	overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 6px 0px 6px, rgba(0, 0, 0, 0.3) -2px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .card:hover {
@@ -224,6 +233,7 @@ body {
 	left: 7%;
 	transform: rotate(-47deg) translateY(50%);
 }
+
 .card:hover::after {
 	background: rgba(255, 0, 0, 0.491);
 }
@@ -260,7 +270,7 @@ body {
 
 .card:hover img {
 	transform: scale(1.2);
-	
+
 }
 
 .card:hover p {
