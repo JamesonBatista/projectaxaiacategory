@@ -128,13 +128,19 @@ body {
 	font-weight: bold;
 	color: black;
 	border-radius: 10px;
-	background: linear-gradient(80deg, #ffffff8d, #ffffff, #ffffff8d);
+	background: linear-gradient(80deg, #ffffff8d, #ffffff, #ffffff69);
 
 	/* background-color: #ffffffaa; */
 	background-size: 400%;
 	animation: luminousBackground 6s infinite ease-in-out;
 	font-family: "Noto Sans Syriac Eastern", sans-serif;
 	transition: all 0.3s ease;
+}
+
+.quali-text-source {
+	padding: 10px;
+	margin-left: 145px;
+
 }
 
 @keyframes luminousBackground {
