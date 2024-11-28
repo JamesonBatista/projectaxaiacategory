@@ -89,6 +89,8 @@ body {
 	overflow-y: auto; /* Apenas rolagem vertical no chat */
 	background: #fff;
 	border-top: 1px solid #ddd;
+	margin: 10px;
+	border-radius: 10px;
   }
   
   .chat-input {
