@@ -17,22 +17,45 @@
 	src: url('./gladden-demo/GladdenDemoRegular.ttf') format('truetype');
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	background: rgb(128 128 128 / 60%);
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color: #fff;
-	overflow-x: hidden;
+	overflow: hidden;
+
+}
+a{
+	list-style: none;
+	text-decoration: none;
 }
 
 .logo-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	height: 150px;
+}
 
-	/* Evita que a imagem se repita */
+
+.logo-container {
+	overflow: hidden;
 	display: flex;
 	padding-left: 10px;
 	width: 100%;
@@ -85,7 +108,6 @@ body {
 		top: 0;
 		left: 0;
 		z-index: -1;
-		filter: blur(2px);
 		width: 100%;
 		height: 200px;
 		display: flex;
@@ -105,8 +127,8 @@ body {
 	padding: 10px;
 	background-color: transparent;
 	margin-left: 20px;
-	border-radius: 15px;
-	margin-top: 10px;
+	border-radius: 20px;
+	margin-top: 6px;
 }
 
 .darwin-text {
@@ -114,7 +136,6 @@ body {
 	font-size: 3rem;
 	letter-spacing: 6px;
 	padding: 10px;
-	/* font-family: 'darwin3', Arial, Helvetica, sans-serif; */
 }
 
 .quali-text {
@@ -127,20 +148,29 @@ body {
 .quali-text {
 	font-weight: bold;
 	color: black;
+
+}
+
+.quali-text-source,
+.dar-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	border-radius: 10px;
 	background: linear-gradient(80deg, #ffffff8d, #ffffff, #ffffff69);
-
-	/* background-color: #ffffffaa; */
 	background-size: 400%;
 	animation: luminousBackground 6s infinite ease-in-out;
 	font-family: "Noto Sans Syriac Eastern", sans-serif;
 	transition: all 0.3s ease;
+
+	span {
+		margin-top: 7px;
+	}
 }
 
 .quali-text-source {
-	padding: 10px;
 	margin-left: 145px;
-
 }
 
 @keyframes luminousBackground {
@@ -162,14 +192,18 @@ body {
 }
 
 .container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow-y: auto;
+	padding: 50px 0;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	gap: 20px;
-	margin-top: 50px;
-	perspective: 1200px;
-	width: 100%;
+	top: 155px;
+	margin-bottom: 100px;
 }
 
 .portal {
@@ -190,10 +224,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	transform-origin: center center;
-	opacity: 0;
-	transform: scale(0.5) translateY(50px) rotateY(90deg);
-	animation: cardEntry 1.5s ease-out forwards;
 	transition: transform 0.4s ease, box-shadow 0.3s ease;
 	color: #333;
 	padding: 20px;
@@ -213,20 +243,12 @@ body {
 	content: '';
 	position: absolute;
 	width: 322px;
-	/* Largura maior que o card para cobrir na diagonal */
 	height: 20px;
-	/* Altura da faixa */
 	z-index: 1;
 
 }
 
 
-/* .card::before {
-	background: blue;
-    top: -22%;
-    left: -50%;
-    transform: rotate(-40deg) translateY(50%);
-} */
 
 .card::after {
 	background: red;
@@ -244,7 +266,6 @@ body {
 .card p {
 	position: relative;
 	z-index: 2;
-	/* Mantém o conteúdo acima das faixas */
 }
 
 .card img {
@@ -252,7 +273,6 @@ body {
 	height: auto;
 	border-radius: 10px;
 	margin-bottom: 10px;
-	transition: transform 0.3s ease-in-out;
 }
 
 .img1 {
@@ -263,15 +283,16 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	color: #333;
-	margin-bottom: 0px;
-	;
+	margin-bottom: 10px;
 }
 
-
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: rgba(18, 18, 1, 1.5) 0px 2px 4px, rgba(18, 18, 1, 1.4) 0px 7px 13px -3px, rgba(18, 18, 1, 0.6) 0px -3px 0px inset;
+}
 
 .card:hover img {
 	transform: scale(1.2);
-
 }
 
 .card:hover p {
