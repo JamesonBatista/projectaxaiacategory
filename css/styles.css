@@ -19,10 +19,7 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background-color: #fff;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background: rgb(128 128 128 / 60%);
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
