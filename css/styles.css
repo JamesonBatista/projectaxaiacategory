@@ -281,6 +281,7 @@ a{
 	height: auto;
 	border-radius: 10px;
 	margin-bottom: 10px;
+	transition: transform 0.5s ease-in-out;
 }
 
 .img1 {
